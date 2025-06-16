@@ -1,0 +1,154 @@
+/* 问卷选择页面样式 */
+
+/* 主容器样式 */
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 卡片样式 */
+.card {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 卡片头部样式 */
+.card-header {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
+
+/* 卡片内容样式 */
+.card-body {
+    padding: 1.5rem;
+}
+
+/* 问卷列表样式 */
+.questionnaire-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.questionnaire-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.questionnaire-list li:last-child {
+    border-bottom: none;
+}
+
+/* 按钮样式 */
+.btn {
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: #0a58ca;
+    border-color: #0a53be;
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-success:hover {
+    background-color: #157347;
+    border-color: #146c43;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5c636a;
+    border-color: #565e64;
+}
+
+/* 问卷状态样式 */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-complete {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.status-incomplete {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.status-not-started {
+    background-color: #e2e3e5;
+    color: #41464b;
+}
+
+/* 用户信息卡片样式 */
+.user-info-card {
+    background-color: #f8f9fa;
+}
+
+/* 提交所有问卷按钮样式 */
+.submit-all-btn {
+    width: 100%;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+/* 信息提示样式 */
+.alert {
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* 加载动画 */
+.spinner-border {
+    margin-right: 8px;
+    width: 1rem;
+    height: 1rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 10px;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .submit-all-btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+} 

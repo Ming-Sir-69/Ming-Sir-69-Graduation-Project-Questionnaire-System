@@ -1,0 +1,169 @@
+[15-Mar-2025 14:28:55 Europe/Berlin] 访问入口页面: 2025-03-15 14:28:55
+[15-Mar-2025 14:28:55 Europe/Berlin] 收到POST请求: Array
+(
+    [action] => admin_login
+    [username] => admin
+    [password] => admin123
+)
+
+[15-Mar-2025 14:28:57 Europe/Berlin] 访问入口页面: 2025-03-15 14:28:57
+[15-Mar-2025 14:31:30 Europe/Berlin] 访问入口页面: 2025-03-15 14:31:30
+[15-Mar-2025 14:32:10 Europe/Berlin] 访问入口页面: 2025-03-15 14:32:10
+[15-Mar-2025 16:02:45 Europe/Berlin] 访问入口页面: 2025-03-15 16:02:45
+[15-Mar-2025 16:02:45 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\xampp\htdocs\网页\共用资源\php\session_handler.php on line 16
+[15-Mar-2025 16:02:51 Europe/Berlin] 访问入口页面: 2025-03-15 16:02:51
+[15-Mar-2025 16:02:51 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\xampp\htdocs\网页\共用资源\php\session_handler.php on line 16
+[15-Mar-2025 16:02:54 Europe/Berlin] 访问入口页面: 2025-03-15 16:02:54
+[15-Mar-2025 16:02:54 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\xampp\htdocs\网页\共用资源\php\session_handler.php on line 16
+[15-Mar-2025 16:02:55 Europe/Berlin] 访问入口页面: 2025-03-15 16:02:55
+[15-Mar-2025 16:02:55 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\xampp\htdocs\网页\共用资源\php\session_handler.php on line 16
+[15-Mar-2025 16:02:56 Europe/Berlin] 访问入口页面: 2025-03-15 16:02:56
+[15-Mar-2025 16:02:56 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\xampp\htdocs\网页\共用资源\php\session_handler.php on line 16
+[15-Mar-2025 16:02:57 Europe/Berlin] 访问入口页面: 2025-03-15 16:02:57
+[15-Mar-2025 16:02:57 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\xampp\htdocs\网页\共用资源\php\session_handler.php on line 16
+[15-Mar-2025 16:02:57 Europe/Berlin] 访问入口页面: 2025-03-15 16:02:57
+[15-Mar-2025 16:02:57 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\xampp\htdocs\网页\共用资源\php\session_handler.php on line 16
+[15-Mar-2025 16:02:57 Europe/Berlin] 访问入口页面: 2025-03-15 16:02:57
+[15-Mar-2025 16:02:57 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\xampp\htdocs\网页\共用资源\php\session_handler.php on line 16
+[15-Mar-2025 16:02:58 Europe/Berlin] 访问入口页面: 2025-03-15 16:02:58
+[15-Mar-2025 16:02:58 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\xampp\htdocs\网页\共用资源\php\session_handler.php on line 16
+[15-Mar-2025 16:02:58 Europe/Berlin] 访问入口页面: 2025-03-15 16:02:58
+[15-Mar-2025 16:02:58 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\xampp\htdocs\网页\共用资源\php\session_handler.php on line 16
+[15-Mar-2025 16:02:58 Europe/Berlin] 访问入口页面: 2025-03-15 16:02:58
+[15-Mar-2025 16:02:58 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\xampp\htdocs\网页\共用资源\php\session_handler.php on line 16
+[15-Mar-2025 16:02:59 Europe/Berlin] 访问入口页面: 2025-03-15 16:02:59
+[15-Mar-2025 16:02:59 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\xampp\htdocs\网页\共用资源\php\session_handler.php on line 16
+[15-Mar-2025 16:02:59 Europe/Berlin] 访问入口页面: 2025-03-15 16:02:59
+[15-Mar-2025 16:02:59 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\xampp\htdocs\网页\共用资源\php\session_handler.php on line 16
+[15-Mar-2025 16:03:00 Europe/Berlin] 访问入口页面: 2025-03-15 16:03:00
+[15-Mar-2025 16:03:00 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\xampp\htdocs\网页\共用资源\php\session_handler.php on line 16
+[15-Mar-2025 16:29:48 Europe/Berlin] 访问入口页面: 2025-03-15 16:29:48
+[15-Mar-2025 16:29:49 Europe/Berlin] 访问入口页面: 2025-03-15 16:29:49
+[15-Mar-2025 16:30:13 Europe/Berlin] 访问入口页面: 2025-03-15 16:30:13
+[15-Mar-2025 16:30:16 Europe/Berlin] 访问入口页面: 2025-03-15 16:30:16
+[15-Mar-2025 16:31:38 Europe/Berlin] 访问入口页面: 2025-03-15 16:31:38
+[15-Mar-2025 16:33:53 Europe/Berlin] 访问入口页面: 2025-03-15 16:33:53
+[15-Mar-2025 16:35:54 Europe/Berlin] 访问入口页面: 2025-03-15 16:35:54
+[15-Mar-2025 16:39:07 Europe/Berlin] 访问入口页面: 2025-03-15 16:39:07
+[15-Mar-2025 16:59:00 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:00
+[15-Mar-2025 16:59:07 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:07
+[15-Mar-2025 16:59:07 Europe/Berlin] 收到POST请求: Array
+(
+    [csrf_token] => 0e97ccb5dff60344e63eba09e32905820d421e18e5e4eaab24eaf2e7df5bbd9f
+    [gender] => 男
+    [age_group] => 36-45岁
+    [usage_frequency] => 每季度
+    [luggage_count] => 3个
+)
+
+[15-Mar-2025 16:59:08 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:08
+[15-Mar-2025 16:59:11 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:11
+[15-Mar-2025 16:59:17 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:17
+[15-Mar-2025 16:59:22 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:22
+[15-Mar-2025 16:59:22 Europe/Berlin] 收到POST请求: Array
+(
+    [csrf_token] => 88538f1a2d1e00f28342fa4942f479e732ffd71bb8b49fef2a4081e721cf3ea0
+    [gender] => 女
+    [age_group] => 36-45岁
+    [usage_frequency] => 半年一到两次
+    [luggage_count] => 4-5个
+)
+
+[15-Mar-2025 16:59:46 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:46
+[15-Mar-2025 16:59:48 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:48
+[15-Mar-2025 16:59:48 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:48
+[15-Mar-2025 16:59:48 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:48
+[15-Mar-2025 16:59:49 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:49
+[15-Mar-2025 16:59:49 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:49
+[15-Mar-2025 16:59:49 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:49
+[15-Mar-2025 16:59:50 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:50
+[15-Mar-2025 16:59:50 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:50
+[15-Mar-2025 16:59:59 Europe/Berlin] 访问入口页面: 2025-03-15 16:59:59
+[15-Mar-2025 17:00:08 Europe/Berlin] 访问入口页面: 2025-03-15 17:00:08
+[15-Mar-2025 17:00:08 Europe/Berlin] 收到POST请求: Array
+(
+    [csrf_token] => 06a7e8fedd6a1a1405ef2ea8eae4cb456714aaa6ee5dfa6564a231f8dde7c301
+    [gender] => 女
+    [age_group] => 36-45岁
+    [usage_frequency] => 半年一到两次
+    [luggage_count] => 3个
+)
+
+[15-Mar-2025 17:02:53 Europe/Berlin] 访问入口页面: 2025-03-15 17:02:53
+[15-Mar-2025 17:02:57 Europe/Berlin] 访问入口页面: 2025-03-15 17:02:57
+[15-Mar-2025 17:02:57 Europe/Berlin] 收到POST请求: Array
+(
+    [csrf_token] => 909a85eeeb572a27ac4ccd6fd33a7f404a3f20e72f6a8ad6273c71380c7a8d6f
+    [gender] => 女
+    [age_group] => 36-45岁
+    [usage_frequency] => 半年一到两次
+    [luggage_count] => 4-5个
+)
+
+[15-Mar-2025 17:03:05 Europe/Berlin] 访问入口页面: 2025-03-15 17:03:05
+[15-Mar-2025 17:03:10 Europe/Berlin] 访问入口页面: 2025-03-15 17:03:10
+[15-Mar-2025 17:03:10 Europe/Berlin] 收到POST请求: Array
+(
+    [csrf_token] => 342bebed1801fc7be6ce5fed51298820a7ae8bdcacbfd81fa092ef4ec3793284
+    [gender] => 女
+    [age_group] => 36-45岁
+    [usage_frequency] => 半年一到两次
+    [luggage_count] => 4-5个
+)
+
+[15-Mar-2025 17:05:22 Europe/Berlin] 访问入口页面: 2025-03-15 17:05:22
+[15-Mar-2025 17:05:30 Europe/Berlin] 访问入口页面: 2025-03-15 17:05:30
+[15-Mar-2025 17:05:30 Europe/Berlin] 收到POST请求: Array
+(
+    [csrf_token] => 7a5163852e5df4096b76b30cf3014aa106b7ef3568c72284a6355719a55ba5b6
+    [gender] => 女
+    [age_group] => 18-25岁
+    [usage_frequency] => 半年一到两次
+    [luggage_count] => 4-5个
+)
+
+[15-Mar-2025 17:05:42 Europe/Berlin] 访问入口页面: 2025-03-15 17:05:42
+[15-Mar-2025 17:05:46 Europe/Berlin] 访问入口页面: 2025-03-15 17:05:46
+[15-Mar-2025 17:05:46 Europe/Berlin] 收到POST请求: Array
+(
+    [csrf_token] => 3d72e7dc84702234affcc005dadbcc1f96c12ce1e5f1b64ecf4331525d82c6c8
+    [gender] => 女
+    [age_group] => 36-45岁
+    [usage_frequency] => 半年一到两次
+    [luggage_count] => 4-5个
+)
+
+[15-Mar-2025 17:07:41 Europe/Berlin] 访问入口页面: 2025-03-15 17:07:41
+[15-Mar-2025 17:07:46 Europe/Berlin] 访问入口页面: 2025-03-15 17:07:46
+[15-Mar-2025 17:07:46 Europe/Berlin] 收到POST请求: Array
+(
+    [csrf_token] => 112de64b044239ce1092ba7839b2a4722945903e0f50908b54654112893d6ec4
+    [gender] => 女
+    [age_group] => 36-45岁
+    [usage_frequency] => 每季度
+    [luggage_count] => 3个
+)
+
+[15-Mar-2025 17:07:53 Europe/Berlin] 访问入口页面: 2025-03-15 17:07:53
+[15-Mar-2025 17:08:03 Europe/Berlin] 访问入口页面: 2025-03-15 17:08:03
+[15-Mar-2025 17:08:07 Europe/Berlin] 访问入口页面: 2025-03-15 17:08:07
+[15-Mar-2025 17:08:07 Europe/Berlin] 收到POST请求: Array
+(
+    [csrf_token] => 7e7530e79ed856f138f89b0008e680f15a0ad971767fb095f96160a901b34594
+    [gender] => 女
+    [age_group] => 36-45岁
+    [usage_frequency] => 每季度
+    [luggage_count] => 3个
+)
+
+[15-Mar-2025 17:11:00 Europe/Berlin] 访问入口页面: 2025-03-15 17:11:00
+[15-Mar-2025 17:11:59 Europe/Berlin] 访问入口页面: 2025-03-15 17:11:59
+[15-Mar-2025 17:11:59 Europe/Berlin] 收到POST请求: Array
+(
+    [csrf_token] => 6aa6f42e0d9eb59d456f8ccebcf7afeef7a028eaceb8779bc181a2bb54c0803c
+    [gender] => 女
+    [age_group] => 60岁以上
+    [usage_frequency] => 每季度
+    [luggage_count] => 3个
+)
+
