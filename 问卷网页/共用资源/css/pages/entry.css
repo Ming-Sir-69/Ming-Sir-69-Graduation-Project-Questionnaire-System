@@ -1,0 +1,940 @@
+/* 
+ * 行李箱调研系统 - 入口页面样式
+ * 包含入口页面特定的样式设置
+ */
+
+/* 渐变背景 */
+body:not(.dark-theme) .bg-gradient {
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.95), rgba(248, 249, 250, 0.8));
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* 深色模式的渐变背景 */
+body.dark-theme .bg-gradient {
+    background: linear-gradient(135deg, rgba(33, 37, 41, 0.95), rgba(33, 37, 41, 0.85));
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* 浮动元素容器 */
+.bg-floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* 浮动元素样式 */
+.floating-element {
+    position: absolute;
+    transform: translate(0, 0) rotate(var(--rotate)) scale(var(--scale, 1));
+    opacity: 0.5;
+    animation: float-around var(--duration, 30s) ease-in-out var(--delay, 0s) infinite;
+    will-change: transform;
+}
+
+/* 圆形元素 */
+.element-circle {
+    width: var(--size, 40px);
+    height: var(--size, 40px);
+    border-radius: 50%;
+    background-color: var(--color);
+}
+
+/* 方形元素 */
+.element-square {
+    width: var(--size, 30px);
+    height: var(--size, 30px);
+    transform: rotate(var(--rotate, 0deg));
+    background-color: var(--color);
+}
+
+/* 三角形元素 */
+.element-triangle {
+    width: 0;
+    height: 0;
+    border-left: calc(var(--size, 30px) * 0.5) solid transparent;
+    border-right: calc(var(--size, 30px) * 0.5) solid transparent;
+    border-bottom: var(--size, 30px) solid var(--color);
+}
+
+/* 图标元素 */
+.element-icon {
+    font-size: var(--size, 30px);
+    color: var(--color);
+}
+
+/* 深色模式下浮动元素调整 */
+body.dark-theme .floating-element {
+    opacity: 0.3;
+}
+
+/* 浮动动画 */
+@keyframes float-around {
+    0% {
+        transform: translate(0, 0) rotate(var(--rotate)) scale(var(--scale, 1));
+    }
+    25% {
+        transform: translate(var(--translate-x), var(--translate-y)) rotate(var(--rotate2)) scale(var(--scale, 1));
+    }
+    50% {
+        transform: translate(var(--translate-x2), var(--translate-y2)) rotate(var(--rotate3)) scale(var(--scale, 1));
+    }
+    75% {
+        transform: translate(var(--translate-x3), var(--translate-y3)) rotate(var(--rotate)) scale(var(--scale, 1));
+    }
+    100% {
+        transform: translate(0, 0) rotate(var(--rotate2)) scale(var(--scale, 1));
+    }
+}
+
+/* 调查卡片样式 */
+.survey-card {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    z-index: 1;
+    background-color: var(--card-bg, #fff);
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 卡片头部 */
+.survey-card .card-header {
+    border-bottom: none;
+    padding: 1.25rem 1rem;
+}
+
+.survey-card .card-header h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 欢迎部分 */
+.welcome-section {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.welcome-section h2 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    background: linear-gradient(90deg, var(--primary-color), var(--accent4));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome-section p {
+    color: var(--text-color);
+}
+
+.luggage-icon {
+    animation: float 6s ease-in-out infinite;
+}
+
+.luggage-icon i {
+    color: var(--primary-color);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.dark-theme .luggage-icon i {
+    color: var(--primary-light) !important; /* 深色模式下图标颜色更亮 */
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* 选项卡片通用样式 - 统一颜色和过渡效果 */
+.option-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.option-card {
+    background-color: rgba(var(--primary-rgb), 0.03);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.dark-theme .option-card {
+    background-color: rgba(var(--primary-rgb), 0.08);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="radio"]:checked + .option-card {
+    border-color: var(--primary-color);
+    background-color: rgba(var(--primary-rgb), 0.1);
+    box-shadow: 0 6px 12px rgba(var(--primary-rgb), 0.15);
+}
+
+.dark-theme input[type="radio"]:checked + .option-card {
+    background-color: rgba(var(--primary-rgb), 0.2);
+    border-color: var(--primary-light);
+}
+
+.card-check .form-check-input,
+.form-check .form-check-input {
+    position: absolute;
+    opacity: 0;
+}
+
+/* ===== 统一的选项卡样式系统 ===== */
+/* 以下是统一设计的卡片样式系统，使用行李箱流行色彩 */
+
+/* 行李箱流行色彩 变量 */
+:root {
+    /* 基础过渡时间 */
+    --transition-normal: 0.3s ease;
+    --transition-fast: 0.2s ease;
+    
+    /* 卡片阴影 */
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
+    --card-shadow-active: 0 6px 12px rgba(0, 0, 0, 0.2);
+    
+    /* 渐变方向 */
+    --gradient-direction: 135deg;
+    
+    /* 行李箱流行色彩 RGB值 */
+    --luggage-navy: 38, 84, 188;       /* 海军蓝 - 商务行李箱 */
+    --luggage-royal: 65, 105, 225;     /* 皇家蓝 - 经典色彩 */
+    --luggage-teal: 24, 163, 180;      /* 青绿色 - 时尚色彩 */
+    --luggage-cyan: 0, 188, 212;       /* 青色 - 现代色彩 */
+    --luggage-purple: 115, 46, 155;    /* 紫色 - 高端行李箱 */
+    --luggage-pink: 236, 64, 122;      /* 粉色 - 女性色彩 */
+    --luggage-orange: 255, 152, 0;     /* 橙色 - 活力色彩 */
+    --luggage-red: 229, 57, 53;        /* 红色 - 醒目色彩 */
+    --luggage-silver: 158, 158, 158;   /* 银色 - 金属行李箱 */
+    --luggage-carbon: 66, 66, 66;      /* 炭黑 - 奢华行李箱 */
+}
+
+/* 统一的选项卡样式：性别、年龄、频率、数量 */
+.gender-options,
+.age-options,
+.frequency-options,
+.count-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* 统一的卡片基础样式 */
+.gender-card,
+.age-card,
+.frequency-card,
+.count-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.75rem;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: var(--card-shadow);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    text-align: center;
+}
+
+/* 性别卡片样式 - 蓝色系 */
+.gender-card {
+    --card-primary: var(--luggage-navy);
+    --card-secondary: var(--luggage-royal);
+}
+
+.gender-card i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(var(--gradient-direction), 
+                               rgb(var(--luggage-navy)), 
+                               rgb(var(--luggage-royal)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    transition: all var(--transition-normal);
+}
+
+/* 年龄卡片样式 - 紫色系 */
+.age-card {
+    --card-primary: var(--luggage-purple);
+    --card-secondary: var(--luggage-pink);
+}
+
+.age-card i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(var(--gradient-direction), 
+                               rgb(var(--luggage-purple)), 
+                               rgb(var(--luggage-pink)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    transition: all var(--transition-normal);
+}
+
+/* 频率卡片样式 - 青色系 */
+.frequency-card {
+    --card-primary: var(--luggage-teal);
+    --card-secondary: var(--luggage-cyan);
+}
+
+.frequency-card i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(var(--gradient-direction), 
+                               rgb(var(--luggage-teal)), 
+                               rgb(var(--luggage-cyan)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    transition: all var(--transition-normal);
+}
+
+/* 数量卡片样式 - 橙红色系 */
+.count-card {
+    --card-primary: var(--luggage-orange);
+    --card-secondary: var(--luggage-red);
+}
+
+.count-card i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(var(--gradient-direction), 
+                               rgb(var(--luggage-orange)), 
+                               rgb(var(--luggage-red)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    transition: all var(--transition-normal);
+}
+
+/* 统一的卡片悬停效果 */
+.gender-card:hover,
+.age-card:hover,
+.frequency-card:hover,
+.count-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.gender-card:hover i,
+.age-card:hover i,
+.frequency-card:hover i,
+.count-card:hover i {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* 统一的卡片选中效果 */
+input[type="radio"]:checked + .gender-card {
+    border-color: rgb(var(--luggage-navy));
+    background-color: rgba(var(--luggage-navy), 0.1);
+    box-shadow: var(--card-shadow-active);
+}
+
+input[type="radio"]:checked + .age-card {
+    border-color: rgb(var(--luggage-purple));
+    background-color: rgba(var(--luggage-purple), 0.1);
+    box-shadow: var(--card-shadow-active);
+}
+
+input[type="radio"]:checked + .frequency-card {
+    border-color: rgb(var(--luggage-teal));
+    background-color: rgba(var(--luggage-teal), 0.1);
+    box-shadow: var(--card-shadow-active);
+}
+
+input[type="radio"]:checked + .count-card {
+    border-color: rgb(var(--luggage-orange));
+    background-color: rgba(var(--luggage-orange), 0.1);
+    box-shadow: var(--card-shadow-active);
+}
+
+input[type="radio"]:checked + .gender-card i,
+input[type="radio"]:checked + .age-card i,
+input[type="radio"]:checked + .frequency-card i,
+input[type="radio"]:checked + .count-card i {
+    transform: scale(1.15);
+}
+
+/* 文本样式统一 */
+.gender-card span,
+.age-card span,
+.frequency-card span,
+.count-card span {
+    font-weight: 500;
+    display: block;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+/* 暗色模式下卡片调整 */
+body.dark-theme .gender-card,
+body.dark-theme .age-card,
+body.dark-theme .frequency-card,
+body.dark-theme .count-card {
+    background-color: rgba(30, 30, 30, 0.6);
+}
+
+body.dark-theme input[type="radio"]:checked + .gender-card {
+    background-color: rgba(var(--luggage-navy), 0.25);
+    border-color: rgb(var(--luggage-navy));
+}
+
+body.dark-theme input[type="radio"]:checked + .age-card {
+    background-color: rgba(var(--luggage-purple), 0.25);
+    border-color: rgb(var(--luggage-purple));
+}
+
+body.dark-theme input[type="radio"]:checked + .frequency-card {
+    background-color: rgba(var(--luggage-teal), 0.25);
+    border-color: rgb(var(--luggage-teal));
+}
+
+body.dark-theme input[type="radio"]:checked + .count-card {
+    background-color: rgba(var(--luggage-orange), 0.25);
+    border-color: rgb(var(--luggage-orange));
+}
+
+/* 管理员登录按钮样式 */
+.admin-login-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* 管理员登录按钮默认样式（亮色主题） */
+.admin-login-btn {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--luggage-navy, #1a3a5f);
+    border-radius: 30px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.admin-login-btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* 主题响应式按钮 - 确保在任何主题下都可见 */
+.theme-aware-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-aware-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.theme-aware-btn:hover::after {
+    box-shadow: 0 0 0 2px var(--primary-color) inset;
+}
+
+.theme-aware-btn i {
+    margin-right: 6px;
+    color: inherit;
+}
+
+/* 暗色主题下的按钮内部边框样式 */
+body.dark-theme .theme-aware-btn::after {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+}
+
+body.dark-theme .theme-aware-btn:hover::after {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5) inset;
+}
+
+/* 管理员登录模态框样式 */
+#adminLoginModal .modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#adminLoginModal .modal-header {
+    background: linear-gradient(135deg, var(--luggage-navy, #1a3a5f), var(--luggage-royal, #2c5282));
+    color: white;
+    border-bottom: none;
+    padding: 1.5rem;
+}
+
+#adminLoginModal .modal-body {
+    padding: 2rem;
+}
+
+#adminLoginModal .btn-close {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+#adminLoginModal .form-control {
+    border-radius: 8px;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+#adminLoginModal .form-control:focus {
+    border-color: var(--luggage-teal, #38b2ac);
+    box-shadow: 0 0 0 3px rgba(56, 178, 172, 0.2);
+}
+
+#adminLoginModal .btn-primary {
+    background-color: var(--luggage-teal, #38b2ac);
+    border-color: var(--luggage-teal, #38b2ac);
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    color: white;
+}
+
+#adminLoginModal .btn-primary:hover {
+    background-color: var(--luggage-cyan, #319795);
+    border-color: var(--luggage-cyan, #319795);
+    transform: translateY(-1px);
+}
+
+#adminLoginModal .btn-secondary {
+    background-color: #e2e8f0;
+    border-color: #e2e8f0;
+    color: #4a5568;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+#adminLoginModal .btn-secondary:hover {
+    background-color: #cbd5e0;
+    border-color: #cbd5e0;
+    transform: translateY(-1px);
+}
+
+#loginErrorMsg {
+    border-radius: 8px;
+    font-size: 0.9rem;
+    padding: 10px 15px;
+}
+
+/* 暗色主题样式 - 使用 body.dark-theme 选择器 */
+body.dark-theme .admin-login-btn {
+    background-color: var(--luggage-purple, #6b46c1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .admin-login-btn:hover {
+    background-color: var(--luggage-pink, #d53f8c);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme #adminLoginModal .modal-header {
+    background: linear-gradient(135deg, var(--luggage-purple, #6b46c1), var(--luggage-pink, #d53f8c));
+}
+
+body.dark-theme #adminLoginModal .modal-content {
+    background-color: #2d3748;
+    color: white;
+}
+
+body.dark-theme #adminLoginModal .form-control {
+    background-color: #4a5568;
+    border-color: #4a5568;
+    color: white;
+}
+
+body.dark-theme #adminLoginModal .form-label {
+    color: #e2e8f0;
+}
+
+body.dark-theme #adminLoginModal .btn-secondary {
+    background-color: #4a5568;
+    border-color: #4a5568;
+    color: #e2e8f0;
+}
+
+body.dark-theme #adminLoginModal .btn-secondary:hover {
+    background-color: #2d3748;
+    border-color: #2d3748;
+}
+
+/* 同时保留data-theme选择器以兼容其他主题切换方式 */
+[data-theme="dark"] .admin-login-btn {
+    background-color: var(--luggage-purple, #6b46c1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .admin-login-btn:hover {
+    background-color: var(--luggage-pink, #d53f8c);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+/* data-theme="dark"下的按钮内部边框样式 */
+[data-theme="dark"] .theme-aware-btn::after {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+}
+
+[data-theme="dark"] .theme-aware-btn:hover::after {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5) inset;
+}
+
+[data-theme="dark"] #adminLoginModal .modal-header {
+    background: linear-gradient(135deg, var(--luggage-purple, #6b46c1), var(--luggage-pink, #d53f8c));
+}
+
+[data-theme="dark"] #adminLoginModal .modal-content {
+    background-color: #2d3748;
+    color: white;
+}
+
+[data-theme="dark"] #adminLoginModal .form-control {
+    background-color: #4a5568;
+    border-color: #4a5568;
+    color: white;
+}
+
+[data-theme="dark"] #adminLoginModal .form-label {
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] #adminLoginModal .btn-secondary {
+    background-color: #4a5568;
+    border-color: #4a5568;
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] #adminLoginModal .btn-secondary:hover {
+    background-color: #2d3748;
+    border-color: #2d3748;
+}
+
+/* 表单标签样式 */
+.form-label {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* 错误提示样式 */
+.invalid-feedback {
+    font-size: 0.875rem;
+    color: var(--danger-color);
+}
+
+.dark-theme .invalid-feedback {
+    color: var(--danger-color-dark);
+}
+
+/* 按钮样式 */
+.btn-lg {
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.2);
+    transition: all var(--transition-normal);
+}
+
+.btn-lg:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(var(--primary-rgb), 0.3);
+}
+
+/* 高可读性模式样式调整 */
+body.high-readability .form-label {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+body.high-readability .option-card,
+body.high-readability .card-body {
+    padding: 1.25rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .survey-card .card-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .frequency-options {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .count-options {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .age-options {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .gender-options {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .survey-card {
+        border-radius: 12px;
+        margin: 0.5rem;
+    }
+    
+    .option-cards {
+        gap: 0.5rem;
+    }
+    
+    .card-check {
+        margin-bottom: 0.5rem;
+    }
+    
+    .frequency-options {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .age-options {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .survey-card .card-header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .gender-options {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 暗黑主题下的登录按钮样式 */
+body.dark-theme #adminLoginModal .btn-primary {
+    background-color: var(--luggage-teal, #38b2ac);
+    border-color: var(--luggage-teal, #38b2ac);
+    color: white;
+}
+
+body.dark-theme #adminLoginModal .btn-primary:hover {
+    background-color: var(--luggage-cyan, #319795);
+    border-color: var(--luggage-cyan, #319795);
+}
+
+/* data-theme="dark"下的登录按钮样式 */
+[data-theme="dark"] #adminLoginModal .btn-primary {
+    background-color: var(--luggage-teal, #38b2ac);
+    border-color: var(--luggage-teal, #38b2ac);
+    color: white;
+}
+
+[data-theme="dark"] #adminLoginModal .btn-primary:hover {
+    background-color: var(--luggage-cyan, #319795);
+    border-color: var(--luggage-cyan, #319795);
+}
+
+/* 调整adminLoginBtn按钮的样式 */
+#adminLoginBtn {
+    background-color: #38b2ac !important;
+    border-color: #38b2ac !important;
+    color: white !important;
+    font-weight: 500 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+#adminLoginBtn:hover {
+    background-color: #319795 !important;
+    border-color: #319795 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 深色模式下的登录按钮样式 */
+body.dark-theme #adminLoginBtn {
+    background-color: #38b2ac !important;
+    border-color: #38b2ac !important;
+    color: white !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.dark-theme #adminLoginBtn:hover {
+    background-color: #319795 !important;
+    border-color: #319795 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* data-theme="dark"下的登录按钮样式 */
+[data-theme="dark"] #adminLoginBtn {
+    background-color: #38b2ac !important;
+    border-color: #38b2ac !important;
+    color: white !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+[data-theme="dark"] #adminLoginBtn:hover {
+    background-color: #319795 !important;
+    border-color: #319795 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* 高可读性模式按钮 */
+.accessibility-toggle-container {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+.accessibility-toggle-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #6c757d;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    font-size: 1.8rem;
+    padding: 0;
+}
+
+.accessibility-toggle-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #4285F4;
+}
+
+.accessibility-toggle-btn.active {
+    background-color: #4285F4;
+    color: #ffffff;
+    border-color: #4285F4;
+}
+
+/* 高可读性模式样式 */
+body.high-readability {
+    font-size: 1.2rem;
+}
+
+body.high-readability .card-header h1 {
+    font-size: 2.2rem;
+}
+
+body.high-readability h2 {
+    font-size: 1.8rem;
+}
+
+body.high-readability h3, 
+body.high-readability label {
+    font-size: 1.6rem;
+}
+
+body.high-readability p, 
+body.high-readability .btn,
+body.high-readability .form-control {
+    font-size: 1.2rem;
+}
+
+body.high-readability .btn {
+    padding: 0.6rem 1.2rem;
+}
+
+body.high-readability .option-card,
+body.high-readability .gender-card,
+body.high-readability .age-card,
+body.high-readability .frequency-card,
+body.high-readability .count-card {
+    padding: 1.5rem 1rem;
+}
+
+body.high-readability .option-card i,
+body.high-readability .gender-card i,
+body.high-readability .age-card i,
+body.high-readability .frequency-card i,
+body.high-readability .count-card i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+body.high-readability .form-label {
+    margin-bottom: 0.8rem;
+}
+
+body.high-readability .option-card span,
+body.high-readability .gender-card span,
+body.high-readability .age-card span,
+body.high-readability .frequency-card span,
+body.high-readability .count-card span {
+    font-size: 1.2rem;
+}
+
+/* 深色模式 */
+body.dark-theme .accessibility-toggle-btn {
+    background-color: #333;
+    color: #f0f0f0;
+    border-color: rgba(255,255,255,0.1);
+}
+
+body.dark-theme .accessibility-toggle-btn:hover {
+    background-color: #444;
+}
+
+body.dark-theme .accessibility-toggle-btn.active {
+    background-color: #4285F4;
+    color: #ffffff;
+    border-color: #4285F4;
+} 

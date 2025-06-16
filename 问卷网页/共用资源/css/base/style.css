@@ -1,0 +1,494 @@
+/* 
+ * 行李箱调研系统 - 基础样式
+ * 包含所有页面通用的样式设置
+ */
+
+:root {
+    /* 亮色(日间)主题色彩 - 更加丰富多彩的配色方案 */
+    --primary-color-light: #4361ee;
+    --primary-light-light: #738eec;
+    --primary-dark-light: #2e4eda;
+    --secondary-color-light: #ff6d00;
+    --secondary-light-light: #ff9e40;
+    --secondary-dark-light: #d65a00;
+    --success-color-light: #2e7d32;
+    --warning-color-light: #ff9800;
+    --danger-color-light: #f44336;
+    --info-color-light: #03a9f4;
+    
+    /* 亮色(日间)补充色彩 - 新增 */
+    --accent1-light: #7209b7;
+    --accent2-light: #3f37c9;
+    --accent3-light: #4cc9f0;
+    --accent4-light: #f72585;
+    --accent5-light: #4895ef;
+    
+    /* 亮色(日间)中性色 */
+    --bg-color-light: #f8f9fa;
+    --card-bg-light: #ffffff;
+    --text-primary-light: #212121;
+    --text-secondary-light: #424242;
+    --text-muted-light: #757575;
+    --border-color-light: #e0e0e0;
+    
+    /* 暗色(夜间)主题色彩 - 更加生动 */
+    --primary-color-dark: #6770e3;
+    --primary-light-dark: #9d9ff1;
+    --primary-dark-dark: #3949ab;
+    --secondary-color-dark: #ff9100;
+    --secondary-light-dark: #ffc246;
+    --secondary-dark-dark: #c56200;
+    --success-color-dark: #43a047;
+    --warning-color-dark: #ffb74d;
+    --danger-color-dark: #e57373;
+    --info-color-dark: #64b5f6;
+    
+    /* 暗色(夜间)补充色彩 - 新增 */
+    --accent1-dark: #b5179e;
+    --accent2-dark: #7678ed;
+    --accent3-dark: #90e0ef;
+    --accent4-dark: #f25c96;
+    --accent5-dark: #90c2f7;
+    
+    /* 暗色(夜间)中性色 */
+    --bg-color-dark: #121212;
+    --card-bg-dark: #1e1e1e;
+    --text-primary-dark: #ffffff;
+    --text-secondary-dark: #e0e0e0;
+    --text-muted-dark: #bdbdbd;
+    --border-color-dark: #424242;
+    
+    /* 主题无关变量 */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.25s ease;
+    --transition-slow: 0.5s ease;
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+    
+    /* 当前激活的主题 */
+    --primary-color: var(--primary-color-light);
+    --primary-light: var(--primary-light-light);
+    --primary-dark: var(--primary-dark-light);
+    --secondary-color: var(--secondary-color-light);
+    --secondary-light: var(--secondary-light-light);
+    --secondary-dark: var(--secondary-dark-light);
+    --success-color: var(--success-color-light);
+    --warning-color: var(--warning-color-light);
+    --danger-color: var(--danger-color-light);
+    --info-color: var(--info-color-light);
+    --accent1: var(--accent1-light);
+    --accent2: var(--accent2-light);
+    --accent3: var(--accent3-light);
+    --accent4: var(--accent4-light);
+    --accent5: var(--accent5-light);
+    --bg-color: var(--bg-color-light);
+    --card-bg: var(--card-bg-light);
+    --text-color: var(--text-primary-light);
+    --text-secondary: var(--text-secondary-light);
+    --text-muted: var(--text-muted-light);
+    --border-color: var(--border-color-light);
+    
+    /* 主题渐变色 - 更丰富多彩 */
+    --bg-gradient-light-start: #e8eaf6;
+    --bg-gradient-light-end: #c5cae9;
+    --bg-gradient-dark-start: #1a237e;
+    --bg-gradient-dark-end: #121858;
+    
+    /* 功能性颜色 */
+    --info-bg: #f5f5f5; 
+    --info-bg-dark: #2c2c2c;
+    --icon-bg: rgba(67, 97, 238, 0.1);
+    --icon-bg-dark: rgba(92, 107, 192, 0.2);
+}
+
+/* 暗色主题 */
+body.dark-theme {
+    /* 主题色彩 */
+    --primary-color: var(--primary-color-dark);
+    --primary-light: var(--primary-light-dark);
+    --primary-dark: var(--primary-dark-dark);
+    --secondary-color: var(--secondary-color-dark);
+    --secondary-light: var(--secondary-light-dark);
+    --secondary-dark: var(--secondary-dark-dark);
+    --success-color: var(--success-color-dark);
+    --warning-color: var(--warning-color-dark);
+    --danger-color: var(--danger-color-dark);
+    --info-color: var(--info-color-dark);
+    --accent1: var(--accent1-dark);
+    --accent2: var(--accent2-dark);
+    --accent3: var(--accent3-dark);
+    --accent4: var(--accent4-dark);
+    --accent5: var(--accent5-dark);
+    
+    /* 中性色 */
+    --bg-color: var(--bg-color-dark);
+    --card-bg: var(--card-bg-dark);
+    --text-color: var(--text-primary-dark);
+    --text-secondary: var(--text-secondary-dark);
+    --text-muted: var(--text-muted-dark);
+    --border-color: var(--border-color-dark);
+}
+
+/* 高可读性模式 - 进一步加强 */
+body.high-readability {
+    --font-size-base: 1.4rem;
+    --font-weight-base: 600;
+    --line-height-base: 1.7;
+    --letter-spacing-base: 0.015em;
+    font-weight: var(--font-weight-base);
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-base);
+}
+
+body.high-readability .card-body {
+    font-size: 1.35rem;
+}
+
+body.high-readability .form-label {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+body.high-readability .option-card,
+body.high-readability .age-card,
+body.high-readability .frequency-card,
+body.high-readability .count-card,
+body.high-readability .gender-card {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+body.high-readability .btn {
+    font-size: 1.35rem;
+    padding: 0.7rem 1.5rem;
+    font-weight: 600;
+}
+
+/* 增加高对比度 */
+body.high-readability .form-label {
+    color: #000000;
+}
+
+body.high-readability.dark-theme .form-label {
+    color: #ffffff;
+}
+
+/* 高对比度模式 */
+body.high-contrast .form-label {
+    color: #000000 !important;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+body.high-contrast.dark-theme .form-label {
+    color: #ffffff !important;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+body.high-contrast .gender-card,
+body.high-contrast .age-card,
+body.high-contrast .frequency-card,
+body.high-contrast .count-card {
+    border-width: 3px;
+}
+
+body.high-contrast input[type="radio"]:checked + .gender-card,
+body.high-contrast input[type="radio"]:checked + .age-card,
+body.high-contrast input[type="radio"]:checked + .frequency-card,
+body.high-contrast input[type="radio"]:checked + .count-card {
+    border-width: 3px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+body.high-contrast.dark-theme input[type="radio"]:checked + .gender-card,
+body.high-contrast.dark-theme input[type="radio"]:checked + .age-card,
+body.high-contrast.dark-theme input[type="radio"]:checked + .frequency-card,
+body.high-contrast.dark-theme input[type="radio"]:checked + .count-card {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+body.high-contrast .btn-primary {
+    border-width: 2px;
+}
+
+/* 全局基础样式 */
+body {
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.5;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* 夜间模式下确保文本可读 */
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, 
+body.dark-theme h4, body.dark-theme h5, body.dark-theme h6, 
+body.dark-theme p, body.dark-theme span, body.dark-theme div {
+    color: var(--text-color);
+}
+
+body.dark-theme .text-muted {
+    color: var(--text-muted) !important;
+}
+
+body.dark-theme .lead {
+    color: var(--text-secondary);
+}
+
+/* 常用颜色类 */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary {
+    color: var(--secondary-color) !important;
+}
+
+/* 按钮样式 */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: var(--secondary-dark);
+    border-color: var(--secondary-dark);
+}
+
+/* 卡片样式 */
+.card {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    color: var(--text-color);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* 表单元素 */
+.form-control, .form-select {
+    border-color: var(--border-color);
+    color: var(--text-color);
+    background-color: var(--card-bg);
+    transition: all var(--transition-fast);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(63, 81, 181, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(63, 81, 181, 0.25);
+}
+
+/* 主题切换器 */
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 8px;
+    z-index: 9999;
+    display: flex;
+    gap: 5px;
+}
+
+.theme-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.theme-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slideInUp {
+    animation: slideInUp 0.5s ease-in-out;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* 通用辅助类 */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    white-space: nowrap;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .hide-md {
+        display: none !important;
+    }
+    
+    .theme-switcher {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hide-sm {
+        display: none !important;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background-color: white !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+}
+
+/* 文本亮色对比模式 - 解决夜间模式下文字可见性问题 */
+.text-light-muted {
+    color: var(--text-muted-dark) !important;
+}
+
+body.dark-theme .modal-content {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+body.dark-theme .modal-header,
+body.dark-theme .modal-footer {
+    border-color: var(--border-color);
+}
+
+/* 确保深色模式下表单控件文字清晰可见 */
+body.dark-theme .form-control,
+body.dark-theme .form-select {
+    color: var(--text-color);
+    background-color: var(--card-bg);
+}
+
+body.dark-theme .form-control::placeholder {
+    color: var(--text-muted);
+}
+
+/* 解决夜间模式下主题切换器的问题 */
+body.dark-theme .theme-switcher {
+    background-color: rgba(30, 30, 30, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .theme-btn {
+    color: var(--text-secondary-dark);
+}
+
+/* 让进度条在夜间模式下更加醒目 */
+body.dark-theme .progress {
+    background-color: var(--border-color);
+}
+
+/* 卡片边框在暗色主题下更加可见 */
+body.dark-theme .card {
+    border: 1px solid var(--border-color);
+}
+
+/* 页脚版权信息样式 */
+.footer-copyright {
+    color: #444;
+    font-weight: 500;
+}
+
+body.dark-theme .card-footer {
+    background-color: var(--card-bg-dark) !important;
+    border-top: 1px solid var(--border-color-dark);
+}
+
+body.dark-theme .footer-copyright {
+    color: #bdbdbd !important;
+} 
