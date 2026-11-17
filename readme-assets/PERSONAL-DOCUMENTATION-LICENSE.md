@@ -1,4 +1,4 @@
-# Personal documentation license · ✦ EricMingle69
+# Personal documentation license · <picture><source media="(prefers-color-scheme: dark)" srcset="../readme-assets/em-logo-dark.svg"><img src="../readme-assets/em-logo-light.svg" alt="EM" height="12"></picture> EricMingle69
 
 ## Scope / 适用范围
 
