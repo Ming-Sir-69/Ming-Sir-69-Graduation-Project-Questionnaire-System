@@ -91,5 +91,5 @@ These are official references for interfaces used by the source, not a verified 
 
 ---
 
-Documentation maintained by **✦ EricMingle69** · [Ming-Sir-69](https://github.com/Ming-Sir-69)  
+Maintained by <picture><source media="(prefers-color-scheme: dark)" srcset="readme-assets/em-logo-dark.svg"><img src="readme-assets/em-logo-light.svg" alt="EM" height="13"></picture> <b>EricMingle69</b> · <a href="https://github.com/Ming-Sir-69">Ming-Sir-69</a><br>
 Original documentation expression: MIT. Existing source-code licensing is unspecified; see [permissions](PERSONAL-NOTICE.md).
