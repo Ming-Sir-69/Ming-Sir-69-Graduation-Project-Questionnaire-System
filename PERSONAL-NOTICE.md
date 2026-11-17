@@ -28,3 +28,6 @@ There is no established root source-code license. The [personal documentation li
 Documentation files in this refresh: `README.md`、`README.en.md`、`PERSONAL-NOTICE.md`、`readme-assets/header-light.svg`、`readme-assets/header-dark.svg`. Any documentation license applies to their original new expression, not retained third-party text.
 
 When using, adapting or redistributing content, retain its applicable author and license notices. Access to devices, accounts, paid services, work materials or personal data requires permission from their actual administrator.
+
+
+本次封面更新新增文件 / Additional cover assets: `readme-assets/cover-zh-light.png`, `readme-assets/cover-zh-dark.png`, `readme-assets/cover-en-light.png`, `readme-assets/cover-en-dark.png`, `readme-assets/survey-light.png`, `readme-assets/survey-dark.png`。既有文档许可仅在可享有权利的原创表达范围内适用；生成插画不据此宣称排他权利。The existing documentation license applies only to original expression to the extent rights are held; no exclusive rights are asserted over generated illustrations.
